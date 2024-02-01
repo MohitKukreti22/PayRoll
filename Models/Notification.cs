@@ -13,6 +13,12 @@ namespace PayRoll.Models
         public string Message { get; set; }
         public bool IsRead { get; set; }
         public DateTime CreatedAt { get; set; }
+       
+
+        public Notification()
+        {
+            CreatedAt = DateTime.Now;
+        }
 
         
         public User? User { get; set; }
