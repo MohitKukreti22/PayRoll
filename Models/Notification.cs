@@ -15,9 +15,11 @@ namespace PayRoll.Models
         public DateTime CreatedAt { get; set; }
        
 
-        public Notification()
+        public Notification(string message, bool isRead, DateTime createdAt)
         {
-            CreatedAt = DateTime.Now;
+            Message = message;
+            IsRead = isRead;
+            CreatedAt = createdAt;
         }
 
         
