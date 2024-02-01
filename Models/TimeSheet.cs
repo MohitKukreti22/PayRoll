@@ -16,6 +16,19 @@ namespace PayRoll.Models
         public string Status { get; set; }
         public int ApprovedBy { get; set; }
         public DateTime ApprovedAt { get; set; }
+        
+
+        public TimeSheet(DateTime weekStartDate, DateTime weekEndDate, decimal totalHoursWorked,
+                         string status, int approvedBy, DateTime approvedAt)
+        {
+            WeekStartDate = weekStartDate;
+            WeekEndDate = weekEndDate;
+            TotalHoursWorked = totalHoursWorked;
+            Status = status;
+            ApprovedBy = approvedBy;
+            ApprovedAt = approvedAt;
+        }
+
 
         public Employee? Employee { get; set; }
         public User? ApprovedByUser { get; set; }
