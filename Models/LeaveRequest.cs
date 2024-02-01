@@ -17,11 +17,15 @@ namespace PayRoll.Models
         public int ApprovedBy { get; set; }
         public DateTime ApprovedAt { get; set; }
 
-         public LeaveRequest()
+         public LeaveRequest(string leaveType, DateTime startDate, DateTime endDate,
+                            string status, int approvedBy, DateTime approvedAt)
         {
-            StartDate = DateTime.Now; 
-            EndDate = DateTime.Now;   
-            ApprovedAt = DateTime.Now; 
+            LeaveType = leaveType;
+            StartDate = startDate;
+            EndDate = endDate;
+            Status = status;
+            ApprovedBy = approvedBy;
+            ApprovedAt = approvedAt;
         }
 
         public Employee? Employee { get; set; }
