@@ -14,9 +14,11 @@ namespace PayRoll.Models
         public string Details { get; set; }
         public DateTime Timestamp { get; set; }
 
-        public AuditTrail()
+        public AuditTrail(string action, string details, DateTime timestamp)
         {
-            Timestamp = DateTime.Now;
+            Action = action;
+            Details = details;
+            Timestamp = timestamp;
         }
 
         public User? User { get; set; }
